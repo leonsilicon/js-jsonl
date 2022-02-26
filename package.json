@@ -3,7 +3,11 @@
 	"version": "1.0.2",
 	"description": "jsonl.parse() and jsonl.stringify()",
 	"license": "MIT",
-	"repository": "github:leonzalion/js-jsonl",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/leonzalion/js-jsonl.git"
+	},
+	"homepage": "https://github.com/leonzalion/js-jsonl#readme",
 	"author": {
 		"name": "Leon Si",
 		"email": "contact@leonzalion.com",

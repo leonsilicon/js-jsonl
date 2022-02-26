@@ -42,18 +42,10 @@ const fooBarParsed: { foo: 'bar' } = jsonl.parse(fooBarString); // no type error
 You can also use the `JsonlInfer<T>` helper to extract the JSONL type:
 
 ```typescript
+import { jsonl } from 'js-jsonl';
 import type { JsonlInfer } from 'js-jsonl';
 
-const fooBar = jsonl.parse<{ foo: 'bar' }>("{foo: 'bar'}");
-type FooBarParsed = JsonlInfer<typeof fooBar> // { foo: 'bar' }
+const fooBar = jsonl.parse<{ foo: string }>("{foo: 'bar'}\n{foo: 'baz'}");
+type FooBarParsed = JsonlInfer<typeof fooBar> // { foo: string }
 ```
 
-
-expect(parsed).toEqual([
-  ["Name", "Session", "Score", "Completed"]
-  ["Gilbert", "2013", 24, true]
-  ["Alexa", "2013", 29, true]
-  ["May", "2012B", 14, false]
-  ["Deloise", "2012A", 19, true]
-])
-```
