@@ -2,10 +2,10 @@
 
 ## Installation
 
-Install js-jsonl from your favourite package manager (I recommended [pnpm](https://pnpm.io)):
+Install js-jsonl from your favourite package manager (I recommend [pnpm](https://pnpm.io)):
 
 ```shell
-pnpm add jsonl
+pnpm add js-jsonl
 ```
 
 ## Usage
