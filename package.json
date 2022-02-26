@@ -1,6 +1,6 @@
 {
 	"name": "js-jsonl",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "JSONL.parse() and JSONL.stringify()",
 	"license": "MIT",
 	"repository": "github:leonzalion/js-jsonl",
