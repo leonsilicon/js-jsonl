@@ -2,6 +2,16 @@ import * as fc from 'fast-check';
 import deepEqual from 'fast-deep-equal';
 import { jsonl } from '~/index.js';
 
+test('stringifies empty array as an empty string', () => {
+	expect(jsonl.stringify([])).toEqual('');
+});
+
+test('parses empty string as an empty array', () => {
+	expect(jsonl.parse('')).toEqual([]);
+	expect(jsonl.parse('\t')).toEqual([]);
+	expect(jsonl.parse('\n\t')).toEqual([]);
+});
+
 test('jsonl.stringify(jsonl.parse(json)) is always equal to json', () => {
 	fc.assert(
 		fc.property(
