@@ -39,6 +39,7 @@
 		"ts-jest-resolver": "^2.0.0",
 		"tsc-alias": "^1.6.1",
 		"tsd": "^0.19.1",
+		"type-fest": "^2.12.0",
 		"typescript": "^4.5.4"
 	},
 	"prettier": "@leonzalion/configs/prettier",
