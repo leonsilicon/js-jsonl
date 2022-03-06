@@ -1,4 +1,5 @@
 import { expectType } from 'tsd';
+import { test } from 'vitest';
 import type { JsonlStringified } from '~/index.js';
 import { jsonl } from '~/index.js';
 
