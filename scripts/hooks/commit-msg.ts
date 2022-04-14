@@ -1,5 +1,5 @@
-import process from 'node:process';
 import { execaSync } from 'execa';
+import process from 'node:process';
 
 const message = process.argv.at(-1);
 

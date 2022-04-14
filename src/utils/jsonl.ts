@@ -1,4 +1,5 @@
 import is from '@sindresorhus/is';
+
 import type { JsonlStringified } from '~/types.js';
 
 export const jsonl = {
