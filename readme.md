@@ -1,6 +1,6 @@
 # js-jsonl
 
-[![npm version](https://badge.fury.io/js/js-jsonl.svg)](https://badge.fury.io/js/js-jsonl)
+[![npm version](https://img.shields.io/npm/v/js-jsonl)](https://npmjs.com/package/js-jsonl)
 
 ## Installation
 
