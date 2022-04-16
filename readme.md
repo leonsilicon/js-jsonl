@@ -1,11 +1,11 @@
 # js-jsonl
 
+[![npm version](https://badge.fury.io/js/js-jsonl.svg)](https://badge.fury.io/js/js-jsonl)
+
 ## Installation
 
-Install js-jsonl from your favourite package manager (I recommend [pnpm](https://pnpm.io)):
-
 ```shell
-pnpm add js-jsonl
+npm install js-jsonl
 ```
 
 ## Usage
