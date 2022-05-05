@@ -23,7 +23,7 @@
 		"test": "vitest run",
 		"lint": "eslint --cache --fix .",
 		"prettier": "prettier --write src",
-		"tc": "tsc --noEmit"
+		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@leonzalion/configs": "^1.4.4",
