@@ -1,5 +1,4 @@
 import * as fc from 'fast-check'
-import deepEqual from 'fast-deep-equal'
 import { expect, test } from 'vitest'
 
 import jsonl from '~/index.js'
