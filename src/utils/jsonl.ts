@@ -1,18 +1,16 @@
-import is from '@sindresorhus/is';
-
-import type { JsonlStringified } from '~/types.js';
-
 export const jsonl = {
-	parse<T = unknown>(jsonl: string | JsonlStringified<T>) {
-		return jsonl
-			.split('\n')
-			.filter((line) => is.nonEmptyStringAndNotWhitespace(line))
-			.map((json) => JSON.parse(json) as T);
+	parse(text: string): unknown {
+		return (
+			text
+				.split('\n')
+				.filter((line) => line.trim() !== '')
+				// JSON.parse automatically trims the lines
+				.map((jsonString) => JSON.parse(jsonString))
+		)
 	},
-	stringify<T = unknown>(obj: T): string & JsonlStringified<T> {
-		const array: unknown[] = is.array(obj) ? obj : [obj];
+	stringify(data: any): string {
+		const array: unknown[] = Array.isArray(data) ? data : [data]
 
-		return array.map((val) => JSON.stringify(val)).join('\n') as string &
-			JsonlStringified<T>;
+		return array.map((val) => JSON.stringify(val)).join('\n')
 	},
-};
+}

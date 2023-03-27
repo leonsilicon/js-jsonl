@@ -1,8 +1,7 @@
-import { expectType } from 'tsd';
-import { test } from 'vitest';
+import { expectType } from 'tsd'
+import { test } from 'vitest'
 
-import type { JsonlStringified } from '~/index.js';
-import { jsonl } from '~/index.js';
+import jsonl from '~/index.js'
 
 test('types are correct', () => {
 	const obj = [
@@ -22,12 +21,7 @@ test('types are correct', () => {
 		},
 		{ name: 'May', wins: [] },
 		{ name: 'Deloise', wins: [['three of a kind', '5♣']] },
-	];
+	]
 
-	expectType<JsonlStringified<typeof obj>>(jsonl.stringify(obj));
-	expectType<typeof obj>(jsonl.parse(jsonl.stringify(obj)));
-
-	const obj2 = [[]];
-	expectType<JsonlStringified<typeof obj2>>(jsonl.stringify(obj2));
-	expectType<typeof obj2>(jsonl.parse(jsonl.stringify(obj2)));
-});
+	expectType<unknown>(jsonl.parse(jsonl.stringify(obj)))
+})

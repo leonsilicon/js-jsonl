@@ -1,2 +1,1 @@
-export type { JsonlInfer,JsonlStringified } from './types.js';
-export { jsonl } from './utils/jsonl.js';
+export { jsonl as default } from './utils/jsonl.js'

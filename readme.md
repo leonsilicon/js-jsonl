@@ -1,8 +1,12 @@
 # js-jsonl
 
+Pasre and stringify data using the [JSON Lines format](https://jsonlines.org/).
+
 [![npm version](https://img.shields.io/npm/v/js-jsonl)](https://npmjs.com/package/js-jsonl)
 
 ## Installation
+
+Install `js-jsonl` using your favorite package manager:
 
 ```shell
 npm install js-jsonl
@@ -11,7 +15,7 @@ npm install js-jsonl
 ## Usage
 
 ```typescript
-import { jsonl } from 'js-jsonl';
+import jsonl from 'js-jsonl';
 
 const jsonlString = `
   ["Name", "Session", "Score", "Completed"]
@@ -31,21 +35,19 @@ const jsonlParsed = [
 
 expect(jsonl.parse(jsonlString)).toEqual(jsonlParsed);
 expect(jsonl.stringify(jsonlParsed)).toEqual(jsonlString);
-
-// Also works with TypeScript!
-
-const fooBar = jsonl.parse<{ foo: 'bar' }>("{foo: 'bar'}");
-const fooBarString = jsonl.stringify(fooBar)
-const fooBarParsed: { foo: 'bar' } = jsonl.parse(fooBarString); // no type error!
 ```
 
-You can also use the `JsonlInfer<T>` helper to extract the JSONL type:
+### Note about types
+
+`jsonl.parse` returns the `unknown` type by default for maximum type-safety. Thus, using a type cast is recommended:
 
 ```typescript
-import { jsonl } from 'js-jsonl';
-import type { JsonlInfer } from 'js-jsonl';
-
-const fooBar = jsonl.parse<{ foo: string }>("{foo: 'bar'}\n{foo: 'baz'}");
-type FooBarParsed = JsonlInfer<typeof fooBar> // { foo: string }
+const fooBar = jsonl.parse("{foo: 'bar'}") as { foo: bar };
+const fooBarString = jsonl.stringify(fooBar) // `jsonl.stringify` always returns a string
 ```
 
+If you prefer that `jsonl.parse` mirrors the behavior of `JSON.parse` and returns any instead, you can add the following import anywhere in your project:
+
+```typescript
+import type 'js-jsonl/parse-return-any'
+```
