@@ -46,8 +46,9 @@ const fooBar = jsonl.parse("{foo: 'bar'}") as { foo: bar };
 const fooBarString = jsonl.stringify(fooBar) // `jsonl.stringify` always returns a string
 ```
 
-If you prefer that `jsonl.parse` mirrors the behavior of `JSON.parse` and returns any instead, you can add the following import anywhere in your project:
+If you prefer that `jsonl.parse` mirrors the behavior of `JSON.parse` and returns any instead, you can add the following import anywhere in your project to change this behavior globally:
 
 ```typescript
-import type 'js-jsonl/parse-return-any'
+// `js-jsonl/parse-returns-any` is an empty module using TypeScript module augmentation to alter the return type of `jsonl.parse`
+import type {} from 'js-jsonl/parse-returns-any'
 ```

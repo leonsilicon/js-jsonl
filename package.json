@@ -16,7 +16,7 @@
 	"type": "module",
 	"exports": {
 		".": "./src/index.ts",
-		"./any": "./src/any.ts"
+		"./parse-returns-any": "./src/parse-returns-any.ts"
 	},
 	"scripts": {
 		"release": "lionp",

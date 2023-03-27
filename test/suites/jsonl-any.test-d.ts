@@ -1,4 +1,4 @@
-import '~/any.js'
+import '~/parse-returns-any.js'
 
 import { expectType } from 'tsd'
 
