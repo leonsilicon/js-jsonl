@@ -1,7 +1,5 @@
-import { execaCommandSync as exec } from 'execa';
-import { copyPackageFiles, rmDist } from 'lionconfig';
+import { copyPackageFiles, rmDist, tsc } from 'lionconfig';
 
 rmDist();
-exec('tsc');
-exec('tsc-alias');
+await tsc();
 await copyPackageFiles();
