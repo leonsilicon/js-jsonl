@@ -5,13 +5,13 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/leonzalion/js-jsonl.git"
+		"url": "https://github.com/leondreamed/js-jsonl.git"
 	},
-	"homepage": "https://github.com/leonzalion/js-jsonl#readme",
+	"homepage": "https://github.com/leondreamed/js-jsonl#readme",
 	"author": {
 		"name": "Leon Si",
-		"email": "contact@leonzalion.com",
-		"url": "https://leonzalion.com"
+		"email": "leon@leondreamed.com",
+		"url": "https://leondreamed.com"
 	},
 	"type": "module",
 	"exports": {
@@ -40,9 +40,6 @@
 	},
 	"publishConfig": {
 		"directory": "dist"
-	},
-	"dependencies": {
-		"@sindresorhus/is": "^5.3.0"
 	},
 	"keywords": [
 		"json",
